@@ -1,5 +1,10 @@
 # Students CGPA API
 
+**Documentation:** [Postman API Documentation](https://documenter.getpostman.com/view/50839260/2sBXcGCyi5)  
+**Live API:** [https://students-cgpa-api-rr39.onrender.com/](https://students-cgpa-api-rr39.onrender.com/)
+
+---
+
 A simple REST API built with Express.js to manage and retrieve student academic information based on their CGPA (Cumulative Grade Point Average).
 
 ## Overview
