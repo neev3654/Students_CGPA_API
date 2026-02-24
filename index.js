@@ -155,19 +155,19 @@ app.get("/students/count", (req, res) => {
 
 
 app.get("/students/:id", (req, res) => {
-   const id = parseInt(req.params.id);
-   let foundStudent = null;
+    const id = parseInt(req.params.id);
+    let foundStudent = null;
 
-   for(let i=0;i<students.length;i++){
-    if(students[i].id === id){
-        foundStudent = students[i];
-        break;
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].id === id) {
+            foundStudent = students[i];
+            break;
+        }
     }
-   }
 
-   if(!foundStudent){
-      return res.status(404).json({ message: "Student not found" });
-   }
+    if (!foundStudent) {
+        return res.status(404).json({ message: "Student not found" });
+    }
     res.status(200).json(foundStudent);
 })
 
@@ -175,16 +175,16 @@ app.get("/students/:id", (req, res) => {
 
 
 app.get("/students/branch/:branchName", (req, res) => {
-   const branchName = req.params.branchName.toLowerCase();
-   let result = [];
+    const branchName = req.params.branchName.toLowerCase();
+    let result = [];
 
-  for (let i = 0; i < students.length; i++) {
-    if (students[i].branch.toLowerCase() === branchName) {
-      result.push(students[i]);
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].branch.toLowerCase() === branchName) {
+            result.push(students[i]);
+        }
     }
-  }
 
-  res.status(200).json(result);
+    res.status(200).json(result);
 })
 
 
