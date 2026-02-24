@@ -148,13 +148,7 @@ app.get("/students/average", (req, res) => {
 
 
 app.get("/students/count", (req, res) => {
-   let count = 0;
-
-   for(let i=0;i<students.length;i++){
-    count++;
-   }
-
-    res.status(200).json({ totalStudents: count });
+    res.status(200).json({ totalStudents: students.length });
 })
 
 
