@@ -78,7 +78,28 @@ const students = [
 ];
 
 app.get("/", (req, res) => {
-    res.send("Express server is running");
+    const welcomeMessage = {
+        message: "Welcome to Students CGPA API",
+        description: "This API provides endpoints to manage and retrieve student academic information.",
+        availableEndpoints: {
+            "GET /students": "Get all students",
+            "GET /students/:id": "Get a specific student by ID",
+            "GET /students/branch/:branchName": "Get all students from a specific branch",
+            "GET /students/topper": "Get the student with highest CGPA",
+            "GET /students/average": "Get average CGPA of all students",
+            "GET /students/count": "Get total number of students"
+        },
+        documentation: "https://documenter.getpostman.com/view/50839260/2sBXcGCyi5",
+        examples: {
+            getAllStudents: "/students",
+            getStudentById: "/students/1",
+            getByBranch: "/students/branch/CSE",
+            getTopper: "/students/topper",
+            getAverage: "/students/average",
+            getCount: "/students/count"
+        }
+    };
+    res.status(200).json(welcomeMessage);
 });
 
 
