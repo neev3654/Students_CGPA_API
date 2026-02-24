@@ -235,7 +235,7 @@ ISC
 
 ## Author
 
-[Your Name]
+[Neev Patel]
 
 ---
 
